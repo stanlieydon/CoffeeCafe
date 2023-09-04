@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Coffee Cafe: Discover our artisanal brews, sustainable beans, and events. Join our coffee community online for a caffeinated journey!">
+    <title>Coffee Cafe</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="size.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Arial, Helvetica, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+        color: #e4bc84;
+        font-size: 2em;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/Logo_White.png" alt="Logo_White">
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="images/icons8-menu-50.png" alt="menu icon">
+                <div class="dropdown-content">
+                    <a href="Login.html">Log in</a>
+                    <a href="Signup.html">Sign up</a>
+                </div>
+            </button>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Contact Us.html">Contact US</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2 style="font-size: 3em; background-color: #80411e; color: #fff; margin: 0;">SPECIAL OFFERS</h2>
+        <div class="special">
+            <br>
+            <div class="slideshow-container">   
+                <div class="mySlides fade">
+                  <img src="images/Baguette.jpg" style="width:100%">
+                  <div class="text">Baguette</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="images/Macaroons.jpg" style="width:100%">
+                  <div class="text">Macaroons</div>
+                </div>
+            </div>
+            <div style="text-align:center; display: none;">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+            </div>
+            <br>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}    
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                        setTimeout(showSlides, 3500); // Change image every 5 seconds
+                    }
+            </script>
+        </div>
+        <div class="main_div">
+            <div class="menu-item"><a href="#">
+                <img src="images/cappuccino.jpg" alt="Cappuccino">
+                <h2>Cappuccino</h2>
+                <p>A classic cappuccino comprises equal parts of espresso, steamed milk, and milk foam.</p>
+                <p>Price: RM4.00</p>
+            </a>
+            </div>
+            <div class="menu-item"><a href="#">
+                <img src="images/latte.jpg" alt="Latte">
+                <h2>Latte</h2>
+                <p>A latte primarily consists of espresso and steamed milk, with a small amount of milk foam on top for coffee designs.</p>
+                <p>Price: RM3.50</p>
+            </a>
+            </div>
+            <div class="menu-item"><a href="#">
+                <img src="images/Black Coffee.jpg" alt="Black coffee">
+                <h2>Black Coffee</h2>
+                <p>Black coffee is a simple coffee drink made by brewing coffee beans with hot water. It has a strong, bitter taste and is usually served without milk or sugar</p>
+                <p>Price: RM3.00</p>
+            </a>
+            </div>
+            <div class="menu-item"><a href="#">
+                <img src="images/mocha.jpg" alt="Mocha">
+                <h2>Mocha</h2>
+                <p>Mocha is a coffee drink that combines espresso with chocolate syrup and steamed milk. It has a rich, chocolatey flavor and is often topped with whipped cream</p>
+                <p>Price: RM8.00</p>
+            </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot_div">
+            <ul>
+                <li><b><u>About Us</u></b></li>
+                <li><a href="#">Our Pastries</a></li>
+                <li><a href="#">Relaxing Ambience</a></li>
+                <li><a href="#">Our Coffee</a></li>
+                <li><a href="#">Community Engagement</a></li>
+            </ul>
+        </div>
+        <div class="foot_div">
+            <ul>
+                <li><b><u>Menu</u></b></li>
+                <li><a href="menu/drinks.html">Drinks</a></li>
+                <li><a href="menu/food.html">Food</a></li>
+            </ul>
+        </div>
+        <div class="foot_div">
+            <ul>
+                <li><b><u>Contact Us</u></b></li>
+                <li><a href="#">Phone Number</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Address</a></li>
+                <li><a href="#">Operating Hours</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

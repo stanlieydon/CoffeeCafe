@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza Ordering App</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #e4bc84;
+                color: #53301e;
+            }
+            header {
+                background-color: #80411e; /* Updated color */
+                border: .25em solid #e4bc84;
+                color: #ad6d2f;
+                padding: 10px;
+                text-align: center;
+            }
+            .menu-item {
+                border: 1px solid #80411e;
+                padding: 10px;
+                margin: 10px;
+                background-color: #ad6d2f;
+            }
+            .menu-item img {
+                max-width: 100px;
+                height: auto;
+            }
+            button {
+                background-color: #ad6d2f;
+                color: #fff;
+                border: none;
+                padding: 6px 12px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #80411e;
+            }
+            #cart {
+                background-color: #e0c6a2;
+                padding: 20px;
+                border-top: 1px solid #926335;
+            }
+            #cart-items li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            .remove-from-cart {
+                background-color: #d9534f;
+                color: #fff;
+                border: none;
+                padding: 3px 8px;
+                cursor: pointer;
+            }
+            .remove-from-cart:hover {
+                background-color: #c9302c;
+            }
+            /* Footer */
+            footer {
+                background-color: #80411e;
+                border: .25em solid #e4bc84;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                text-align: center;
+            }
+            .foot_div ul li:first-of-type{
+                font-size: 1.5em;
+                color: #ad6d2f;
+            }
+            .foot_div {
+                flex: 1;
+                padding: 0 10px;
+            }
+            .foot_div ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .foot_div ul li {
+                font-weight: bold;
+                color: #ad6d2f;
+                margin-bottom: 10px;
+            }
+            .foot_div ul li a {
+                color: #e0c6a2;
+                text-decoration: none;
+            }
+            .foot_div ul li a:hover {
+                color: #e4bc84;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Pizza Ordering App</h1>
+        </header>
+        <main>
+            <section id="menu">
+                <div class="menu-item">
+                    <img src="https://media.istockphoto.com/id/537640710/photo/homemade-pineapple-and-ham-hawaiian-pizza.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=OoGlZ5rM8OSBOqqCt_4z8bqIY60QredwMPbd5qxzjiM=" alt="Hawaiian Pizza">
+                    <h2>Hawaiian Pizza</h2>
+                    <p>Sweet pineapple, savory ham, and melted mozzarella on a crispy crust.</p>
+                    <p>Price: RM10.85</p>
+                    <button class="add-to-cart" data-item="Hawaiian Pizza" data-price="10.85">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://media.istockphoto.com/id/521403691/photo/hot-homemade-pepperoni-pizza.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=KnhIQkTXRomTqloOutmCKQO18a8vms_Hn60SqGpOvTY=" alt="Beef Pepperoni Pizza">
+                    <h2>Beef Pepperoni Pizza</h2>
+                    <p>Zesty beef pepperoni, melted mozzarella, and Parmesan cheese.</p>
+                    <p>Price: RM12.50</p>
+                    <button class="add-to-cart" data-item="Beef Pepperoni Pizza" data-price="12.50">Add to Cart</button>
+                </div>
+            </section>
+            <section id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </ul>
+                <p>Total: <span id="cart-total">RM0.00</span></p>
+                <button id="place-order">Place Order</button>
+            </section>
+        </main>
+        <footer>
+            <div class="foot_div">
+                <ul>
+                    <li><b><u>About Us</u></b></li>
+                    <li><a href="#">Our Pastries</a></li>
+                    <li><a href="#">Relaxing Ambience</a></li>
+                    <li><a href="#">Our Coffee</a></li>
+                    <li><a href="#">Community Engagement</a></li>
+                </ul>
+            </div>
+            <div class="foot_div">
+                <ul>
+                    <li><b><u>Menu</u></b></li>
+                    <li><a href="menu/drinks.html">Drinks</a></li>
+                    <li><a href="menu/food.html">Food</a></li>
+                </ul>
+            </div>
+            <div class="foot_div">
+                <ul>
+                    <li><b><u>Contact Us</u></b></li>
+                    <li><a href="#">Phone Number</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Operating Hours</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

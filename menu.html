@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Coffee Cafe: Discover our artisanal brews, sustainable beans, and events. Join our coffee community online for a caffeinated journey!">
+    <title>Menu</title>
+    <style>
+        *{
+            margin: auto;
+        }
+        p{
+            margin: .8em 0;
+        }
+        h2{
+            margin: .8em 0;
+        }
+        #cart-items li span{
+            margin: 0em;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #53301e;
+        }
+        header {
+            text-align: center; 
+            background-color:#80411e;
+            border: .25em solid #e4bc84;
+            color: #ad6d2f;
+        }
+        header h1{
+            padding: .5em 0;
+            font-size: 5em;
+        }
+        header img{
+            width: 50em;
+            padding:0;
+        }
+        main{
+            background-color: #80411e;
+            border: .25em solid #e4bc84;
+        }
+        .menu-item {
+            border: .1em solid #e0c6a2;
+            border-radius: 1em;
+            padding: 10px;
+            margin: 10px;
+            background-color: #e4bc84;
+        }
+        .menu-item img {
+            max-width: 100px;
+            height: auto;
+        }
+        button {
+            background-color: #ad6d2f;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #80411e;
+        }
+        #cart {
+            background-color: #ad6d2f;
+            padding: 20px;
+            border-top: 1px solid #926335;
+        }
+        #place-order{
+            background-color: #80411e;
+        }
+        #place-order:hover{
+            background-color: #472411;
+        }
+        #cart-items li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .remove-from-cart {
+            margin: 0;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 3px 8px;
+            cursor: pointer;
+        }
+        .remove-from-cart:hover {
+            background-color: #c9302c;
+        }
+        /*dropdown*/
+        .dropdown{
+            position: relative;
+            display: inline-block;
+            float: right;
+            padding: 2.5em 2em 0 0;
+        }
+        .dropbtn img{
+            width: 4em;
+            height: auto;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 6em;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 0;
+            right: 0;
+        }
+        .dropdown-content a {
+            color: black;
+            font-size: medium;
+            padding: .5em 2em;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: rgba(0,0,0,0.6);
+        }
+        /*a*/
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: #ad6d2f;
+        }
+        a:visited{
+            color: #37251b;
+        }
+        /*nav*/
+        nav{
+            margin: auto;
+            text-align: center;
+            background-color: #e4bc84;
+            border: .25em solid #e4bc84;
+        }
+        nav ul li{
+            display: inline;
+            font-size: larger;
+            margin: 1%;
+        }
+        nav ul li a{
+            padding: 1% 2.5% 1% 2.5%;
+        }
+        nav div ul li a{
+            font-size: larger;
+            font-weight: bold;
+        }
+        /* Footer */
+        footer {
+            background-color: #80411e;
+            border: .25em solid #e4bc84;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .foot_div ul li:first-of-type{
+            font-size: 1.5em;
+            color: #ad6d2f;
+        }
+        .foot_div {
+            flex: 1;
+            padding: 0 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .foot_div ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .foot_div ul li {
+            font-weight: bold;
+            color: #ad6d2f;
+            margin-bottom: 10px;
+        }
+        .foot_div ul li a {
+            color: #e0c6a2;
+            text-decoration: none;
+        }
+        .foot_div ul li a:hover {
+            color: #e4bc84;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/Logo_White.png" alt="Logo_White">
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="images/icons8-menu-50.png" alt="menu icon">
+                <div class="dropdown-content">
+                    <a href="Login.html">Log in</a>
+                    <a href="Signup.html">Sign up</a>
+                </div>
+            </button>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Contact Us.html">Contact US</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="menu">
+            <h2 style="margin-left: .5em; font-size: 2em;">Coffee</h2>
+            <div class="menu-item">
+                <img src="images/cappuccino.jpg" alt="Cappuccino">
+                <h2>Cappuccino</h2>
+                <p>A classic cappuccino comprises equal parts of espresso, steamed milk, and milk foam.</p>
+                <p>Price: RM4.00</p>
+                <button class="add-to-cart" data-item="Cappuccino" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/latte.jpg" alt="Latte">
+                <h2>Latte</h2>
+                <p>A latte primarily consists of espresso and steamed milk, with a small amount of milk foam on top for coffee designs.</p>
+                <p>Price: RM3.50</p>
+                <button class="add-to-cart" data-item="Latte" data-price="3.50">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/Black Coffee.jpg" alt="Black coffee">
+                <h2>Black Coffee</h2>
+                <p>Black coffee is a simple coffee drink made by brewing coffee beans with hot water. It has a strong, bitter taste and is usually served without milk or sugar</p>
+                <p>Price: RM3.00</p>
+                <button class="add-to-cart" data-item="Black coffee" data-price="3.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/mocha.jpg" alt="Mocha">
+                <h2>Mocha</h2>
+                <p>Mocha is a coffee drink that combines espresso with chocolate syrup and steamed milk. It has a rich, chocolatey flavor and is often topped with whipped cream</p>
+                <p>Price: RM8.00</p>
+                <button class="add-to-cart" data-item="Mocha" data-price="8.00">Add to Cart</button>
+            </div>
+
+            <h2 style="margin-left: .5em; font-size: 2em;">Pastries</h2>
+            <div class="menu-item">
+                <img src="images/Macaroons.jpg" alt="Macaroons">
+                <h2>Macaroons</h2>
+                <p>Macaroons are small, sweet treats that are made with almond flour, sugar, and egg whites. They come in a variety of flavors and colors and are often used as a dessert or gift</p>
+                <p>Price: RM4.00</p>
+                <button class="add-to-cart" data-item="Macaroons" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/Baguette.jpg" alt="Baguette">
+                <h2>Baguette</h2>
+                <p>A baguette is a long, thin loaf of bread that is crispy on the outside and soft on the inside. It is perfect for sandwiches or as a side to soup or salad.</p>
+                <p>Price: RM6.00</p>
+                <button class="add-to-cart" data-item="Baguette" data-price="6.00">Add to Cart</button>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <p>Total: <span id="cart-total">RM0.00</span></p>
+            <button id="place-order">Place Order</button>
+        </section>
+    </main>
+    <script>
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        let cartTotal = 0;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const itemName = button.getAttribute('data-item');
+                const itemPrice = parseFloat(button.getAttribute('data-price'));
+                
+                const cartItem = document.createElement('li');
+                const cartItemContent = document.createElement('span');
+                cartItemContent.textContent = `${itemName} - RM${itemPrice.toFixed(2)}`;
+                cartItem.appendChild(cartItemContent);
+                
+                const removeButton = document.createElement('button');
+                removeButton.className = 'remove-from-cart';
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', () => {
+                    cartItem.remove();
+                    cartTotal -= itemPrice;
+                    cartTotalElement.textContent = `RM${cartTotal.toFixed(2)}`;
+                });
+                cartItem.appendChild(removeButton);
+                
+                cartItemsList.appendChild(cartItem);
+                
+                cartTotal += itemPrice;
+                cartTotalElement.textContent = `RM${cartTotal.toFixed(2)}`;
+            });
+        });
+        
+        const placeOrderButton = document.getElementById('place-order');
+        placeOrderButton.addEventListener('click', () => {
+            // Here you can implement the logic to place the order
+            alert('Order placed successfully!');
+            cartItemsList.innerHTML = '';
+            cartTotal = 0;
+            cartTotalElement.textContent = `RM${cartTotal.toFixed(2)}`;
+        });
+    </script>
+    <footer>
+        <div class="foot_div">
+            <ul>
+                <li><b><u>About Us</u></b></li>
+                <li><a href="#">Our Pastries</a></li>
+                <li><a href="#">Relaxing Ambience</a></li>
+                <li><a href="#">Our Coffee</a></li>
+                <li><a href="#">Community Engagement</a></li>
+            </ul>
+        </div>
+        <div class="foot_div">
+            <ul>
+                <li><b><u>Menu</u></b></li>
+                <li><a href="menu.html" target="_blank">Coffee</a></li>
+                <li><a href="menu.html" target="_blank">Food</a></li>
+            </ul>
+        </div>
+        <div class="foot_div">
+            <ul>
+                <li><b><u>Contact Us</u></b></li>
+                <li><a href="#">Phone Number</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Address</a></li>
+                <li><a href="#">Operating Hours</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
